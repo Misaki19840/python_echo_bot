@@ -100,3 +100,12 @@ This project is a slightly modified version of the original code to support depl
 ```bash
 git remote add azure <Git Clone URL>
 git push azure main:master
+```
+
+### 6. Test Bot
+- Go to your Bot resource.
+- Navigate to Settings > Test in Web Chat.
+
+### 7. Debug
+- Go to your Web App resource.
+- Navigate to Monitoring > Log stream.
