@@ -73,7 +73,7 @@ This project is a slightly modified version of the original code to support depl
 - Under **Source Control**, select **Local Git**.
 - Copy the **Git Clone URL**.
 - Under **Local Git/FTPS Credentials**, select **Application Scope**.
-- Copy the **Username** and **Password**.
+- Copy the **Local Git username** and **Password** for azure deployment.
 
 ### 3. Create Azure Bot Resource
 
@@ -81,7 +81,10 @@ This project is a slightly modified version of the original code to support depl
   - **Type**: Multi-Tenant  
   - **Pricing tier**: Free (F0)
 - Go to **Settings > Configuration > Microsoft App ID > Manage Password**.
+- Now you'are in **Certificates & secrets** page.
 - Generate a new **Client Secret** (password).
+- Copy the **Client Secret**.
+- Go to **Overview**. Copy your **Directory (tenant) ID**.
 
 ### 4. Set Environment Variables
 
@@ -91,8 +94,8 @@ This project is a slightly modified version of the original code to support depl
     | Name                   | Value                         |
     |------------------------|-------------------------------|
     | `MicrosoftAppId`       | `<Your Azure Bot App ID>`     |
-    | `MicrosoftAppPassword` | `<Your Azure Bot App Password>` |
-    | `MicrosoftAppTenantId` | `<Your Azure Bot Tenant ID>`  |
+    | `MicrosoftAppPassword` | `<Your Client Secret>` |
+    | `MicrosoftAppTenantId` | `<Your Tenant ID>`   |
     | `MicrosoftAppType`     | `MultiTenant`                 |
 
 ### 5. Deploy to Azure
