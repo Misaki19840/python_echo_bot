@@ -74,17 +74,27 @@ This project is a slightly modified version of the original code to support depl
 - Copy the **Git Clone URL**.
 - Under **Local Git/FTPS Credentials**, select **Application Scope**.
 - Copy the **Local Git username** and **Password** for azure deployment.
+- Go to **Overview**. Copy **Defaule domain**.
 
 ### 3. Create Azure Bot Resource
 
 - Create a new **Azure Bot**:
   - **Type**: Multi-Tenant  
   - **Pricing tier**: Free (F0)
+
+- Go to **Settings > Configuration**.
+- Add the following environment variables:
+
+    | Name                   | Value                         |
+    |------------------------|-------------------------------|
+    | `Messaging endpoint`       | `https://<Your Web app default domain>/api/messages`     |
+
 - Go to **Settings > Configuration > Microsoft App ID > Manage Password**.
 - Now you'are in **Certificates & secrets** page.
 - Generate a new **Client Secret** (password).
 - Copy the **Client Secret**.
-- Go to **Overview**. Copy your **Directory (tenant) ID**.
+- Go to **Overview**. 
+- Copy your **Application (client) ID** and **Directory (tenant) ID**.
 
 ### 4. Set Environment Variables
 
@@ -93,7 +103,7 @@ This project is a slightly modified version of the original code to support depl
 
     | Name                   | Value                         |
     |------------------------|-------------------------------|
-    | `MicrosoftAppId`       | `<Your Azure Bot App ID>`     |
+    | `MicrosoftAppId`       | `<Your Application ID>`     |
     | `MicrosoftAppPassword` | `<Your Client Secret>` |
     | `MicrosoftAppTenantId` | `<Your Tenant ID>`   |
     | `MicrosoftAppType`     | `MultiTenant`                 |
